@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- VALORES GLOBALES  -->
+    <string name="hello">Monitoreo de Telefonicas BBVA Bancomer</string>
+    <string name="app_name">Respuestas Bidireccionales</string>
+    <string name="estatus_label">Estatus..</string>
+    <string name="progress_bar_label">Iniciando servicio..</string>
+    <string name="sms_service_name">Servicio SMS Telcel</string>
+    <string name="selectDefatultOption">Seleccionar una opción</string>
+	<!-- VALORES GLOBALES  -->
+	
+	<!-- Navegador -->	
+    <string-array name="menu_prompt_entries">        
+		<item>Principal</item>        
+		<item>Eventos</item>        
+		<item>Configuracion</item>        
+	</string-array>
+	<string name="menu_prompt">Escoger Actividad</string>
+	<!-- Navegador -->
+	
+	<string-array name="carriers">
+	    <item>--</item>
+	    <item>TELCEL</item>
+	    <item>NEXTEL</item>
+	    <item>MOVISTAR</item>
+	    <item>IUSACELL</item>
+	    <item>UNEFON</item>
+	</string-array>
+	
+</resources>

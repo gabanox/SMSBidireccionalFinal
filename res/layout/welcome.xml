@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+	<TextView
+	    android:id="@+id/overallServiceStatusLabel"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:text="Estatus general de servicio de " />
+   
+   <RatingBar
+        android:id="@+id/statusBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:layout_gravity="center" />
+   
+   <ScrollView 
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+       
+   		<LinearLayout 
+	   	    android:layout_width="fill_parent"
+	   	    android:layout_height="fill_parent"
+	   	    android:orientation="vertical">
+	       
+			<TextView
+			    android:id="@+id/messageCenterLabel"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_horizontal"
+			    android:text="Central de Mensajes" />
+			
+			<EditText 
+			    android:id="@+id/messageCenterText"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:editable="false"
+			    android:textColor="#ffffff"
+			    android:enabled="false"
+			    android:text=""/>
+		
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:orientation="horizontal" >
+
+				<ImageButton 
+				    android:id="@+id/refresh"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/refresh"/>
+
+			    <ProgressBar
+			        android:id="@+id/loader"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:visibility="gone" />
+
+			    <ToggleButton
+			        android:id="@+id/serviceControl"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="right"
+			        android:layout_weight="0.56"
+			        android:textOff="Apagado"
+			        android:textOn="Encendido" />
+			    
+			</LinearLayout>
+		
+		   	<TextView
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:editable="false"
+		   	    android:text="Total registros: "
+		   	    android:textColor="#fff" />
+		   	
+		   	<TextView 
+		   	    android:id="@+id/totalRowsText"
+		   	    android:text=""
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:editable="false"
+		   	    android:textColor="#fff"/>
+		   	
+		   	<LinearLayout 
+		   	    android:orientation="horizontal"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content">
+		   	    
+				<TextView 
+				    android:id="@+id/generalStatusLabel"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="Estatus: "/>
+				
+				<TextView 
+				    android:id="@+id/generalStatus"
+				    android:layout_height="wrap_content"
+				    android:layout_width="wrap_content"/>
+		
+		   	</LinearLayout>
+		   	
+		   	<LinearLayout 
+		   	    android:orientation="horizontal"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content">
+		   	    
+			    <TextView 
+				    android:id="@+id/availabilityLabel"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="Disponibilidad "/>
+			    
+		   	</LinearLayout>
+		
+		    <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:orientation="horizontal">
+		        
+		    	<ProgressBar
+			        android:id="@+id/availabilityBar"
+			        style="?android:attr/progressBarStyleHorizontal"
+			        android:layout_width="250sp"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="top"
+			        android:paddingBottom="5sp"
+			        android:progress="0" />
+		    	
+		    	 <TextView 
+				    android:id="@+id/availability"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textColor="#ffffff"
+				    android:paddingLeft="10sp"
+				    android:paddingTop="5sp"
+				    android:textSize="20sp"
+				    android:text=""/>
+		        
+		    </LinearLayout>
+			    
+			<TextView 
+			    android:id="@+id/totalMessagesSentLabel"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Cantidad de mensajes"/>
+			
+				<LinearLayout 
+				    android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent">
+				    
+				    <TextView 
+				        android:id="@+id/totalMessagesSentLabel"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingLeft="5sp"
+				        android:text="Enviados"/>
+				    
+					<TextView 
+					    android:id="@+id/totalMessagesSent"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:paddingLeft="5sp"
+					    android:text=""/>
+				    
+					<TextView 
+					    android:id="@+id/totalMessagesReceivedLabel"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:paddingLeft="5sp"
+					    android:text="Recibidos"/>
+				    
+					<TextView 
+					    android:id="@+id/totalMessagesReceived"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:paddingLeft="5sp"
+					    android:text=""/>
+					
+					<TextView 
+					    android:id="@+id/totalMessagesLossLabel"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:paddingLeft="5sp"
+					    android:text="Perdidos"/>
+					
+					<TextView 
+					    android:id="@+id/totalMessagesLoss"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:paddingLeft="5sp"
+					    android:text=""/>
+					
+				</LinearLayout>
+			
+			
+			<TextView 
+			    android:id="@+id/sendingTimeAvegareLabel"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Tiempos promedio"/>
+			
+				<LinearLayout 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal">
+				    
+				    <TextView 
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingLeft="5sp"
+				        android:text="Envio"/>
+
+					<TextView 
+					    android:id="@+id/sendingTimeAverage"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+				        android:paddingLeft="5sp"
+				        android:paddingRight="30sp"
+					    android:text=""/>				    				    
+				    
+				    <TextView 
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingLeft="5sp"
+				        android:text="Recepcion"/>
+					
+					<TextView 
+					    android:id="@+id/receptionTimeAvegage"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:paddingLeft="5sp"
+					    android:text=""/>	
+				    
+				</LinearLayout>		
+		</LinearLayout>
+		
+	</ScrollView>
+	
+</LinearLayout>
